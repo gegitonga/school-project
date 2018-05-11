@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+
+        android:layout_marginEnd="1dp"
+        android:src="@drawable/index2"
+        android:tint="@android:color/black"
+        app:fabSize="mini"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dp" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/input"
+        android:layout_width="311dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:hint="enter Route or location and condition"
+        android:labelFor="@+id/editText"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="8dp"
+        android:paddingStart="0dp"
+        android:paddingTop="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="48dp">
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignStart="@+id/input"
+        android:layout_below="@+id/list"
+        android:layout_marginTop="-43dp"
+        android:background="@drawable/rounded_corner"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/input">
+
+
+        <TextView
+            android:id="@+id/prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/input"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="1dp"
+
+            android:background="@color/white"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+             />
+
+        <ImageButton
+            android:id="@+id/IBmap"
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_margin="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_clear2"
+            android:layout_marginRight="1dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="396dp"
+        android:layout_above="@id/fab"
+        android:layout_marginBottom="43dp"
+        android:divider="@drawable/divider"
+        android:dividerHeight="30dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+</RelativeLayout>
